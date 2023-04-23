@@ -11,6 +11,7 @@ type Config struct {
 	SimpleLineSecret string
 	SimpleLineToken  string
 	ChatGPTToken     string
+	ProjectId        string
 }
 
 var config *Config
@@ -32,6 +33,7 @@ func Load() *Config {
 			SimpleLineSecret: os.Getenv("SIMPLE_LINE_SECRET"),
 			SimpleLineToken:  os.Getenv("SIMPLE_LINE_TOKEN"),
 			ChatGPTToken:     os.Getenv("CHATGPT_TOKEN"),
+			ProjectId:        os.Getenv("PROJECT_ID"),
 		}
 	}
 	return config

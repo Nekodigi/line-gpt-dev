@@ -28,7 +28,7 @@ func (s *Simple) Handle(e *gin.Engine) {
 		c.Status(http.StatusOK)
 	})
 
-	e.GET("/ping", func(ctx *gin.Context) { ctx.String(http.StatusOK, "pong") })
+
 }
 
 func (s *Simple) callback(r *http.Request) error {

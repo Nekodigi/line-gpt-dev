@@ -3,18 +3,25 @@ module github.com/Nekodigi/line-gpt-dev
 go 1.20
 
 require (
+	cloud.google.com/go/firestore v1.9.0
+	firebase.google.com/go v3.13.0+incompatible
+	github.com/gin-gonic/gin v1.9.0
+	github.com/joho/godotenv v1.5.1
+	github.com/line/line-bot-sdk-go/v7 v7.20.0
+	github.com/sashabaranov/go-openai v1.9.0
+	github.com/sirupsen/logrus v1.9.0
+)
+
+require (
 	cloud.google.com/go v0.110.0 // indirect
 	cloud.google.com/go/compute v1.19.0 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
-	cloud.google.com/go/firestore v1.9.0 // indirect
 	cloud.google.com/go/iam v0.13.0 // indirect
 	cloud.google.com/go/longrunning v0.4.1 // indirect
 	cloud.google.com/go/storage v1.30.1 // indirect
-	firebase.google.com/go v3.13.0+incompatible // indirect
 	github.com/bytedance/sonic v1.8.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.9.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.11.2 // indirect
@@ -26,17 +33,13 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.8.0 // indirect
-	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/line/line-bot-sdk-go/v7 v7.20.0 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
-	github.com/sashabaranov/go-openai v1.9.0 // indirect
-	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.9 // indirect
 	go.opencensus.io v0.24.0 // indirect

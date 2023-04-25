@@ -15,7 +15,7 @@ func NewUser(ID string) *User {
 		Id:             ID,
 		Args:           []string{},
 		Status:         "idle",
-		ChatType:       "chat",
+		ChatType:       "会話",
 		LangFrom:       "jp",
 		LangTo:         "en",
 		WorkingCommand: "",

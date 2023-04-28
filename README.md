@@ -1,11 +1,34 @@
+# line-gpt-dev
+![LINE GPT](https://user-images.githubusercontent.com/38092328/235027512-e3ce2681-9c70-47ed-ada8-385de1cd93a0.png)
+
+- [Demo](#demo)
+- [Blog](#blog)
+- [Feature](#feature)
+- [TODO](#todo)
+- [Setup](#setup)
+  - [1. ChatGPT API, Line公式アカウント, Firebaseの準備](#1-chatgpt-api-line公式アカウント-firebaseの準備)
+  - [2. 機能の定義](#2-機能の定義)
+- [Usage](#usage)
+  - [1. 会話モードを使う](#1-会話モードを使う)
+  - [2. モード(コマンド)の切り替え](#2-モードコマンドの切り替え)
+  - [3. カスタムコマンドの作成](#3-カスタムコマンドの作成)
+  - [4. カスタムコマンドを使う](#4-カスタムコマンドを使う)
+- [Source Code](#source-code)
+  - [Backend](#backend)
+
 ## Demo
 
 [https://lin.ee/TRJzQJp](https://lin.ee/TRJzQJp)
 
+## Blog
+
+画像つきの詳細解説はBlogを参照ください。  
+[Blogへ移動](https://nekodigi.hatenablog.com/entry/2023/04/28/094650?_ga=2.254117192.1360339689.1682641090-1726183129.1680835625)
+
 ## Feature
 
-- 機能を無限に追加できる　ex]会話、翻訳、励まし、要約
-- カスタム機能の例を入れる
+- 機能を無限に追加できる　
+- 会話、翻訳、励まし、要約が初めから使える
 - 引数もカスタマイズ可能
 
 ## TODO

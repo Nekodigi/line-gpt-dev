@@ -89,10 +89,11 @@ func (l *Multi) reactText(text string, user *models.User) string {
 				res = l.askChatGPT(text, user).Choices[0].Message.Content
 			} else {
 				user.ChatType = command.Id
+				user.Args = []string{}
 				res = fmt.Sprintf("「%s」モードになりました。", command.Id)
 				if len(command.Args) != 0 {
 					user.Status = consts.StatusAskArgValues
-					user.Args = []string{}
+
 					res = fmt.Sprintf("「%s」モードになりました。「%s」を入力してください。", command.Id, command.Args[0])
 				}
 			}

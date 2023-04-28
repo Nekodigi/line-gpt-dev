@@ -1,5 +1,5 @@
 # line-gpt-dev
-![LINE GPT](https://user-images.githubusercontent.com/38092328/235027512-e3ce2681-9c70-47ed-ada8-385de1cd93a0.png)
+[![LINE GPT](https://user-images.githubusercontent.com/38092328/235027512-e3ce2681-9c70-47ed-ada8-385de1cd93a0.png)](https://nekodigi.hatenablog.com/entry/2023/04/28/094650?_ga=2.254117192.1360339689.1682641090-1726183129.1680835625)
 
 - [Demo](#demo)
 - [Blog](#blog)

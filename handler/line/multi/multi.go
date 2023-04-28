@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/Nekodigi/line-gpt-dev/consts"
 	"github.com/Nekodigi/line-gpt-dev/infrastructure"
@@ -53,6 +54,9 @@ func (l *Multi) callback(r *http.Request) error {
 		//action := l.react(event, pd, member)
 		res := "メッセージがありません"
 
+		if event.Type == linebot.EventTypeFollow {
+			res = "友達登録ありがとうございます！ただいま会話モードになっています。翻訳、要約、励ましと話しかけるとモードが切り替わる他、カスタムと話しかけるとカスタムコマンドを作成できます。"
+		}
 		if event.Type == linebot.EventTypeMessage {
 			switch msg := event.Message.(type) {
 			case *linebot.TextMessage:
@@ -76,13 +80,6 @@ func (l *Multi) reactText(text string, user *models.User) string {
 	switch user.Status {
 	case consts.StatusIdle:
 		switch text {
-		case "会話":
-			user.ChatType = consts.TypeChat
-			res = "会話モードになりました"
-		case "翻訳":
-			user.ChatType = consts.TypeTranslate
-			user.Status = consts.StatusAskLangTo
-			res = "翻訳先の言語を教えてください。"
 		case "カスタム":
 			user.Status = consts.StatusAskCommandName
 			res = "カスタムコマンド名を入力してください。"
@@ -183,6 +180,7 @@ func (l *Multi) askChatGPT(text string, user *models.User) openai.ChatCompletion
 	embededMessage := fmt.Sprintf(command.Messages, args...)
 	fmt.Println(embededMessage)
 
+	embededMessage = strings.Replace(embededMessage, "\n", " ", -1)
 	messages := []openai.ChatCompletionMessage{}
 	err = json.Unmarshal([]byte(embededMessage), &messages)
 	if err != nil {
